@@ -64,10 +64,10 @@ function extendsPostcss(match, { plugins, env }) {
         }
 
         if (match.loader.options) {
-            match.loader.options.plugins = () => postcssPlugins;
+            match.loader.options.plugins = postcssPlugins;
         } else {
             match.loader.options = {
-                plugins: () => postcssPlugins
+                plugins: postcssPlugins
             };
         }
     }
